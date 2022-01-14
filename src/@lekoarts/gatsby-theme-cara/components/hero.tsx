@@ -4,6 +4,8 @@ import Divider from "@lekoarts/gatsby-theme-cara/src/elements/divider";
 import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner";
 import Content from "@lekoarts/gatsby-theme-cara/src/elements/content";
 import Svg from "@lekoarts/gatsby-theme-cara/src/components/svg";
+import Headshot from "./headshot";
+
 import {
   UpDown,
   UpDownWide,
@@ -16,15 +18,14 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
     <Divider speed={0.2} offset={offset} factor={factor}>
       <UpDown>
-        <img src={Jim} />
         <Svg
           icon="triangle"
           hiddenMobile
-          width={4}
+          width={48}
           stroke
           color="icon_orange"
           left="10%"
-          top="20%"
+          top="10%"
         />
         <Svg
           icon="hexa"
@@ -37,13 +38,14 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         <Svg icon="box" width={6} color="icon_darker" left="60%" top="15%" />
       </UpDown>
       <UpDownWide>
+        <Headshot width={360} left="50%" top="10%" borderColor="icon_blue" />
         <Svg
           icon="arrowUp"
           hiddenMobile
           width={16}
           color="icon_blue"
           left="80%"
-          top="10%"
+          top="-10%"
         />
         <Svg
           icon="triangle"

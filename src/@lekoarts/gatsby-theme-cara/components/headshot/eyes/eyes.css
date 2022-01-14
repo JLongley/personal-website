@@ -1,0 +1,26 @@
+.eye {
+  width: 50px;
+  height: 75px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 70px;
+}
+
+.left {
+  left: 70px;
+}
+
+.right {
+  right: 70px;
+}
+
+.pupil {
+  width: 10px;
+  height: 15px;
+  background: #111;
+  border-radius: 50%;
+  position: absolute;
+  left: calc(50% - 5px);
+  bottom: calc(50% - 7px);
+}

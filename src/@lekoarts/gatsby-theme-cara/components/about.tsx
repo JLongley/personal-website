@@ -3,6 +3,7 @@ import Divider from "@lekoarts/gatsby-theme-cara/src/elements/divider";
 import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner";
 import Content from "@lekoarts/gatsby-theme-cara/src/elements/content";
 import Svg from "@lekoarts/gatsby-theme-cara/src/components/svg";
+
 import {
   UpDown,
   UpDownWide,
