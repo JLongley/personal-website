@@ -4,7 +4,7 @@ import { jsx } from "theme-ui";
 import Eyes from "./eyes";
 import Jim from "./Jim.jpg";
 
-const Headshot = ({ width, icon, left, top, borderColor }: HeadshotProps) => (
+const Headshot = ({ width, left, top, borderColor }: HeadshotProps) => (
 	<div
 		sx={{
 			position: `absolute`,

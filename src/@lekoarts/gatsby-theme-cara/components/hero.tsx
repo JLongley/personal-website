@@ -5,6 +5,7 @@ import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner";
 import Content from "@lekoarts/gatsby-theme-cara/src/elements/content";
 import Svg from "@lekoarts/gatsby-theme-cara/src/components/svg";
 import Headshot from "./headshot";
+import Cube from "./cube";
 
 import {
   UpDown,
@@ -19,6 +20,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
     <Divider speed={0.2} offset={offset} factor={factor}>
       <UpDown>
         <Headshot width={360} left="45%" top="5%" borderColor="icon_blue" />
+        <Cube width={20} left="70%" top="5%" borderColor="icon_blue" />
         <Svg
           icon="triangle"
           hiddenMobile
