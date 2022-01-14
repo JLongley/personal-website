@@ -4,19 +4,10 @@ import { jsx } from "theme-ui";
 import Eyes from "./eyes";
 import Jim from "./Jim.jpg";
 
-const Headshot = ({
-	width,
-	icon,
-	left,
-	top,
-	borderColor,
-	hiddenMobile = false,
-}: HeadshotProps) => (
+const Headshot = ({ width, icon, left, top, borderColor }: HeadshotProps) => (
 	<div
 		sx={{
 			position: `absolute`,
-			border: "10px solid",
-			borderColor: "red",
 			left,
 			top,
 		}}
@@ -24,11 +15,11 @@ const Headshot = ({
 		<img
 			sx={{
 				position: `relative`,
-				display: hiddenMobile ? hidden : `block`,
+				width,
+				height: width,
 				border: "10px solid",
 				borderColor,
 				borderRadius: "50%",
-				width,
 			}}
 			src={Jim}
 		/>
@@ -41,7 +32,6 @@ type HeadshotProps = {
 	left: string;
 	top: string;
 	borderColor: string;
-	hiddenMobile?: boolean;
 };
 
 export default Headshot;
