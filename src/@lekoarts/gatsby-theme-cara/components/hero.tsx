@@ -20,12 +20,10 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
     <Divider speed={0.2} offset={offset} factor={factor}>
       <UpDown>
         <Headshot width={360} left="45%" top="5%" borderColor="icon_blue" />
-        <Cube width={20} left="70%" top="5%" borderColor="icon_blue" />
-        <Svg
-          icon="triangle"
+        <Cube width={40} left="70%" top="5%" color="icon_blue" />
+        <Cube
           hiddenMobile
-          width={40}
-          stroke
+          width={180}
           color="icon_orange"
           left="10%"
           top="10%"
