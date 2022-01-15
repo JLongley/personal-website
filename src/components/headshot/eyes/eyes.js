@@ -4,7 +4,9 @@ import { jsx } from "theme-ui";
 import { useMousePosition } from "../../../hooks/useMousePosition";
 import { useCallback, useState } from "react";
 
-const Eye = ({ left, right }) => {
+import PupilImg from "../Jim_pupil.png";
+
+const Eye = ({ left, right, top, width }) => {
   const page = useMousePosition();
   const [dimensions, setDimensions] = useState(null);
 
@@ -26,14 +28,14 @@ const Eye = ({ left, right }) => {
       ref={callBackRef}
       sx={{
         position: "absolute",
-        top: "35%",
+        top,
         left,
         right,
-        width: "10%",
-        height: "10%",
-        backgroundColor: "#fff",
+        width,
+        height: width,
         borderRadius: "50%",
         transform: "rotate(" + rot + "deg)",
+        backgroundColor: "#DDD",
       }}
     >
       <Pupil />
@@ -42,16 +44,18 @@ const Eye = ({ left, right }) => {
 };
 
 const Pupil = () => (
-  <div
+  <img
+    alt=""
     sx={{
-      width: "40%",
-      height: "40%",
+      width: "55%",
+      height: "55%",
       borderRadius: "50%",
       backgroundColor: "#000",
       position: "absolute",
-      top: "2px",
+      top: "0px",
       left: "30%",
     }}
+    src={PupilImg}
   />
 );
 
@@ -62,10 +66,11 @@ const Eyes = () => (
       width: "100%",
       height: "100%",
       top: 0,
+      transform: "scale(1, .58)",
     }}
   >
-    <Eye left="39%" />
-    <Eye right="34%" />
+    <Eye left="42%" top="34%" width="5.5%" />
+    <Eye right="38%" top="34.5%" width="5.5%" />
   </div>
 );
 
