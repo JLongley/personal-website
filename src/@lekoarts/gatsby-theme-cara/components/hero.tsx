@@ -3,7 +3,6 @@ import { jsx } from "theme-ui";
 import Divider from "@lekoarts/gatsby-theme-cara/src/elements/divider";
 import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner";
 import Content from "@lekoarts/gatsby-theme-cara/src/elements/content";
-import Svg from "@lekoarts/gatsby-theme-cara/src/components/svg";
 import Headshot from "../../../components/headshot";
 import Cube from "../../../components/cube";
 
@@ -18,9 +17,8 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
     <Divider speed={0.2} offset={offset} factor={factor}>
       <UpDown>
-        <Cube width={360} left="45%" top="5%" color="icon_blue">
-          <Headshot width={360} left="45%" top="5%" borderColor="icon_blue" />
-        </Cube>
+        <Headshot width={360} left="45%" top="5%" borderColor="icon_blue" />
+        {/*<Cube width={360} left="45%" top="5%" color="icon_blue" />*/}
         <Cube width={40} left="70%" top="5%" color="icon_blue" />
         <Cube
           hiddenMobile
@@ -60,21 +58,14 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
           top="6%"
         />
       </UpDownWide>
-      <Cube
-        hiddenMobile
-        width={96}
-        stroke={16}
-        color="icon_darker"
-        left="5%"
-        top="70%"
-      />
+      <Cube hiddenMobile width={96} color="icon_darker" left="5%" top="70%" />
       <Cube width={30} color="icon_darkest" stroke={5} left="4%" top="20%" />
       <Cube width={48} stroke={8} color="icon_darkest" left="75%" top="60%" />
       <Cube width={48} color="icon_darkest" left="95%" top="90%" />
       <Cube hiddenMobile width={128} color="icon_darker" left="40%" top="80%" />
       <Cube width={36} color="icon_darker" left="25%" top="5%" />
-      <Cube width={262} stroke={36} color="icon_green" left="95%" top="5%" />
-      <Cube hiddenMobile width={264} color="icon_purple" left="9%" top="90%" />
+      <Cube width={262} hiddenMobile color="icon_green" left="95%" top="5%" />
+      <Cube hiddenMobile width={264} color="icon_purple" left="60%" top="90%" />
       <Cube width={30} color="icon_darkest" left="10%" top="10%" />
       <Cube width={50} color="icon_darkest" left="40%" top="30%" />
       <Cube width={54} color="icon_darker" left="10%" top="50%" />

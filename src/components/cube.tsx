@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
+import { hidden } from "@lekoarts/gatsby-theme-cara/src/styles/utils";
 
 import { keyframes } from "@emotion/react";
 
@@ -30,6 +31,7 @@ const Cube = ({
   color,
   stroke = width / 16,
   children,
+  hiddenMobile = false,
 }: CubeProps) => {
   const spin = keyframes`
       0% {
@@ -56,6 +58,7 @@ const Cube = ({
         top,
         width,
         height: width,
+        display: hiddenMobile ? hidden : `block`,
       }}
     >
       <div
@@ -91,7 +94,9 @@ const Cube = ({
             transform={`rotateX(180deg) translateZ(${width / 2}px)`}
             color={color}
             stroke={stroke}
-          />
+          >
+            {children}
+          </Face>
           <Face
             left
             transform={`rotateY(-90deg) translateZ(${width / 2}px)`}
@@ -128,6 +133,7 @@ type CubeProps = {
   left: string;
   top: string;
   color: string;
+  hiddenMobile?: boolean;
 };
 
 export default Cube;
