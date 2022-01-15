@@ -41,7 +41,7 @@ const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         />
       </UpDown>
       <UpDownWide>
-        <Cube hiddenMobile width={96} color="icon_purple" left="5%" top="80%" />
+        <Cube hiddenMobile width={96} color="icon_green" left="5%" top="80%" />
         <Cube width={48} color="icon_brightest" left="95%" top="50%" />
         <Cube hiddenMobile width={30} color="icon_dark" left="85%" top="15%" />
         <Cube

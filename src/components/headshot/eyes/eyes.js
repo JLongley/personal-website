@@ -35,7 +35,7 @@ const Eye = ({ left, right, top, width }) => {
         height: width,
         borderRadius: "50%",
         transform: "rotate(" + rot + "deg)",
-        backgroundColor: "#DDD",
+        backgroundColor: "#CCC",
       }}
     >
       <Pupil />

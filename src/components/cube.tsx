@@ -34,9 +34,11 @@ const Cube = ({
   stroke = width / 16,
   hiddenMobile = false,
   animationDuration = width / 4,
-  animationDelay = width * 1117, //pseudorandom
+  animationDelay = width * 17, //pseudorandom
   children,
 }: CubeProps) => {
+  console.log("animationDelay", animationDelay);
+
   const page = useMousePosition();
   const [dimensions, setDimensions] = useState(null);
 
