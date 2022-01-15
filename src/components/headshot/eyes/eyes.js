@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 
-import { useMousePosition } from "../../../../../hooks/useMousePosition";
+import { useMousePosition } from "../../../hooks/useMousePosition";
 import { useCallback, useState } from "react";
 
 const Eye = ({ left, right }) => {

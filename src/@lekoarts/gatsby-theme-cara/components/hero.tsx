@@ -4,8 +4,8 @@ import Divider from "@lekoarts/gatsby-theme-cara/src/elements/divider";
 import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner";
 import Content from "@lekoarts/gatsby-theme-cara/src/elements/content";
 import Svg from "@lekoarts/gatsby-theme-cara/src/components/svg";
-import Headshot from "./headshot";
-import Cube from "./cube";
+import Headshot from "../../../components/headshot";
+import Cube from "../../../components/cube";
 
 import {
   UpDown,
@@ -13,13 +13,14 @@ import {
 } from "@lekoarts/gatsby-theme-cara/src/styles/animations";
 // @ts-ignore
 import Intro from "../sections/intro";
-import Jim from "./Jim.jpg";
 
 const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
     <Divider speed={0.2} offset={offset} factor={factor}>
       <UpDown>
-        <Headshot width={360} left="45%" top="5%" borderColor="icon_blue" />
+        <Cube width={360} left="45%" top="5%" color="icon_blue">
+          <Headshot width={360} left="45%" top="5%" borderColor="icon_blue" />
+        </Cube>
         <Cube width={40} left="70%" top="5%" color="icon_blue" />
         <Cube
           hiddenMobile
@@ -28,120 +29,56 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
           left="10%"
           top="10%"
         />
-        <Svg
-          icon="hexa"
-          width={48}
-          stroke
-          color="icon_red"
-          left="60%"
-          top="70%"
-        />
-        <Svg icon="box" width={6} color="icon_darker" left="30%" top="15%" />
+        <Cube icon="hexa" width={48} color="icon_red" left="60%" top="70%" />
+        <Cube icon="box" width={18} color="icon_darker" left="30%" top="15%" />
       </UpDown>
       <UpDownWide>
-        <Svg
-          icon="arrowUp"
-          hiddenMobile
-          width={16}
-          color="icon_blue"
-          left="80%"
-          top="-10%"
-        />
-        <Svg
-          icon="triangle"
-          width={12}
-          stroke
+        <Cube hiddenMobile width={16} color="icon_blue" left="80%" top="-10%" />
+        <Cube
+          width={36}
+          stroke={2}
           color="icon_brightest"
           left="90%"
-          top="50%"
+          top="60%"
         />
-        <Svg icon="circle" width={16} color="icon_darker" left="7%" top="90%" />
-        <Svg
-          icon="triangle"
-          width={16}
-          stroke
-          color="icon_darkest"
-          left="30%"
-          top="65%"
-        />
-        <Svg
-          icon="cross"
-          width={16}
-          stroke
-          color="icon_pink"
-          left="28%"
-          top="15%"
-        />
-        <Svg
+        <Cube width={56} stroke={12} color="icon_darker" left="7%" top="90%" />
+        <Cube width={48} color="icon_darkest" left="30%" top="65%" />
+        <Cube width={60} color="icon_pink" left="28%" top="15%" />
+        <Cube
           icon="circle"
-          width={6}
+          width={24}
+          stroke={3}
           color="icon_darkest"
           left="75%"
           top="10%"
         />
-        <Svg
-          icon="upDown"
+        <Cube
           hiddenMobile
-          width={8}
+          width={40}
           color="icon_darkest"
-          left="45%"
-          top="10%"
+          left="38%"
+          top="6%"
         />
       </UpDownWide>
-      <Svg
-        icon="circle"
+      <Cube
         hiddenMobile
-        width={24}
+        width={96}
+        stroke={16}
         color="icon_darker"
         left="5%"
         top="70%"
       />
-      <Svg icon="circle" width={6} color="icon_darkest" left="4%" top="20%" />
-      <Svg icon="circle" width={12} color="icon_darkest" left="80%" top="60%" />
-      <Svg icon="upDown" width={8} color="icon_darkest" left="95%" top="90%" />
-      <Svg
-        icon="upDown"
-        hiddenMobile
-        width={24}
-        color="icon_darker"
-        left="40%"
-        top="80%"
-      />
-      <Svg
-        icon="triangle"
-        width={8}
-        stroke
-        color="icon_darker"
-        left="25%"
-        top="5%"
-      />
-      <Svg icon="circle" width={64} color="icon_green" left="95%" top="5%" />
-      <Svg
-        icon="box"
-        hiddenMobile
-        width={64}
-        color="icon_purple"
-        left="5%"
-        top="90%"
-      />
-      <Svg icon="box" width={6} color="icon_darkest" left="10%" top="10%" />
-      <Svg icon="box" width={12} color="icon_darkest" left="40%" top="30%" />
-      <Svg
-        icon="hexa"
-        width={16}
-        stroke
-        color="icon_darker"
-        left="10%"
-        top="50%"
-      />
-      <Svg
-        icon="hexa"
-        width={8}
-        stroke
-        color="icon_darker"
-        left="80%"
-        top="70%"
-      />
+      <Cube width={30} color="icon_darkest" stroke={5} left="4%" top="20%" />
+      <Cube width={48} stroke={8} color="icon_darkest" left="75%" top="60%" />
+      <Cube width={48} color="icon_darkest" left="95%" top="90%" />
+      <Cube hiddenMobile width={128} color="icon_darker" left="40%" top="80%" />
+      <Cube width={36} color="icon_darker" left="25%" top="5%" />
+      <Cube width={262} stroke={36} color="icon_green" left="95%" top="5%" />
+      <Cube hiddenMobile width={264} color="icon_purple" left="9%" top="90%" />
+      <Cube width={30} color="icon_darkest" left="10%" top="10%" />
+      <Cube width={50} color="icon_darkest" left="40%" top="30%" />
+      <Cube width={54} color="icon_darker" left="10%" top="50%" />
+      <Cube width={24} color="icon_darker" left="80%" top="70%" />
     </Divider>
     <Content
       sx={{ variant: `texts.bigger` }}

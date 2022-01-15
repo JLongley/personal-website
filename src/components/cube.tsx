@@ -3,9 +3,10 @@ import { jsx } from "theme-ui";
 
 import { keyframes } from "@emotion/react";
 
-const Face = ({ transform, color, stroke }) => (
+const Face = ({ transform, color, stroke, children }) => (
   <figure
     sx={{
+      boxSizing: "border-box",
       display: "block",
       position: "absolute",
       margin: 0,
@@ -17,10 +18,19 @@ const Face = ({ transform, color, stroke }) => (
       backfaceVisibility: "hidden",
       transform,
     }}
-  />
+  >
+    {children}
+  </figure>
 );
 
-const Cube = ({ width, left, top, color, stroke = width / 20 }: CubeProps) => {
+const Cube = ({
+  width,
+  left,
+  top,
+  color,
+  stroke = width / 16,
+  children,
+}: CubeProps) => {
   const spin = keyframes`
       0% {
         transform: translateZ(-${width /
@@ -35,6 +45,8 @@ const Cube = ({ width, left, top, color, stroke = width / 20 }: CubeProps) => {
           2}px) rotateY(0deg) rotateZ(360deg) rotateX(45deg);
       }
     `;
+
+  const animationDuration = width / 4;
 
   return (
     <div
@@ -56,7 +68,7 @@ const Cube = ({ width, left, top, color, stroke = width / 20 }: CubeProps) => {
       >
         <div
           sx={{
-            animation: `${spin} ${width / 10}s infinite linear`,
+            animation: `${spin} ${animationDuration}s infinite linear`,
             animationDelay: `-${width * 17}ms`,
             width: "100%",
             height: "100%",
@@ -71,7 +83,9 @@ const Cube = ({ width, left, top, color, stroke = width / 20 }: CubeProps) => {
             transform={`rotateY(0deg) translateZ(${width / 2}px)`}
             color={color}
             stroke={stroke}
-          />
+          >
+            {children}
+          </Face>
           <Face
             back
             transform={`rotateX(180deg) translateZ(${width / 2}px)`}
