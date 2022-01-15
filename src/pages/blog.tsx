@@ -13,9 +13,9 @@ import Seo from "@lekoarts/gatsby-theme-cara/src/components/seo";
 import Content from "@lekoarts/gatsby-theme-cara/src/elements/content";
 import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner";
 
-const NotFound = () => (
+const Blog = () => (
   <Layout>
-    <Seo title="404 - Not Found" />
+    <Seo title="Blog" />
     <Parallax pages={1}>
       <div>
         <Divider speed={0.2} offset={0} factor={1}>
@@ -95,7 +95,7 @@ const NotFound = () => (
           factor={1}
         >
           <Inner>
-            <Themed.h1>404 - Page not found</Themed.h1>
+            <Themed.h1>Blog</Themed.h1>
             <Themed.p>
               Go back to <Link to="/">homepage</Link>.
             </Themed.p>
@@ -106,4 +106,4 @@ const NotFound = () => (
   </Layout>
 );
 
-export default NotFound;
+export default Blog;
