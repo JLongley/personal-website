@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { hidden } from "@lekoarts/gatsby-theme-cara/src/styles/utils";
-
 import { keyframes } from "@emotion/react";
+import { useMousePosition } from "../hooks/useMousePosition";
+import { useCallback, useState } from "react";
 
 const Face = ({ transform, color, stroke, children }) => (
   <figure
@@ -25,33 +26,55 @@ const Face = ({ transform, color, stroke, children }) => (
 );
 
 const Cube = ({
+  grow = false,
   width,
   left,
   top,
   color,
   stroke = width / 16,
-  children,
   hiddenMobile = false,
+  animationDuration = width / 4,
+  animationDelay = width * 1117, //pseudorandom
+  children,
 }: CubeProps) => {
+  const page = useMousePosition();
+  const [dimensions, setDimensions] = useState(null);
+
+  const callBackRef = useCallback((domNode) => {
+    if (domNode) {
+      setDimensions(domNode.getBoundingClientRect());
+    }
+  }, []);
+
+  let distance = 1;
+
+  if (grow) {
+    if (!!page && !!dimensions) {
+      distance = Math.sqrt(
+        Math.pow((dimensions.x - page.x) / window.screen.width, 2) +
+          Math.pow((dimensions.y + page.y) / window.screen.height, 2)
+      );
+    }
+  }
+
   const spin = keyframes`
       0% {
         transform: translateZ(-${width /
-          2}px) rotateY(360deg) rotateZ(0deg) rotateX(45deg);
+          2}px) rotateY(00deg) rotateZ(0deg) rotateX(0deg);
       }
       50% {
         transform: translateZ(-${width /
-          2}px) rotateY(180deg) rotateZ(180deg) rotateX(45deg);
+          2}px) rotateY(180deg) rotateZ(180deg) rotateX(180deg);
       }
       100% {
         transform: translateZ(-${width /
-          2}px) rotateY(0deg) rotateZ(360deg) rotateX(45deg);
+          2}px) rotateY(360deg) rotateZ(360deg) rotateX(360deg);
       }
     `;
 
-  const animationDuration = width / 4;
-
   return (
     <div
+      ref={callBackRef}
       sx={{
         position: `absolute`,
         left,
@@ -59,6 +82,7 @@ const Cube = ({
         width,
         height: width,
         display: hiddenMobile ? hidden : `block`,
+        transform: `scale(${distance})`,
       }}
     >
       <div
@@ -72,7 +96,7 @@ const Cube = ({
         <div
           sx={{
             animation: `${spin} ${animationDuration}s infinite linear`,
-            animationDelay: `-${width * 17}ms`,
+            animationDelay: `-${animationDelay}ms`,
             width: "100%",
             height: "100%",
             position: "absolute",
@@ -134,6 +158,9 @@ type CubeProps = {
   top: string;
   color: string;
   hiddenMobile?: boolean;
+  grow?: boolean;
+  animationDuration?: number;
+  animationDelay?: number;
 };
 
 export default Cube;

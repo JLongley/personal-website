@@ -8,9 +8,8 @@ import JimNoEyesImg from "./Jim_no_eyes.png";
 const Headshot = ({ width, left, top, borderColor }: HeadshotProps) => (
 	<div
 		sx={{
+			boxSizing: "border-box",
 			position: `absolute`,
-			left,
-			top,
 			width,
 			height: width,
 		}}
@@ -20,24 +19,17 @@ const Headshot = ({ width, left, top, borderColor }: HeadshotProps) => (
 				position: `absolute`,
 				width: "100%",
 				height: "100%",
-				// width,
-				// height: width,
-				border: "10px solid",
-				borderColor,
-				borderRadius: "50%",
 			}}
 			src={JimBlankEyesImg}
 		/>
 		<Eyes />
 		<img
 			sx={{
+				boxSizing: "border-box",
 				// visibility: "hidden",
 				position: `absolute`,
-				width,
-				height: width,
-				border: "10px solid",
-				borderColor,
-				borderRadius: "50%",
+				width: "100%",
+				height: "100%",
 			}}
 			src={JimNoEyesImg}
 		/>

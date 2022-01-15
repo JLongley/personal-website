@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-
 import { useMousePosition } from "../../../hooks/useMousePosition";
 import { useCallback, useState } from "react";
 
@@ -27,6 +26,7 @@ const Eye = ({ left, right, top, width }) => {
     <div
       ref={callBackRef}
       sx={{
+        boxSizing: "border-box",
         position: "absolute",
         top,
         left,
@@ -47,6 +47,7 @@ const Pupil = () => (
   <img
     alt=""
     sx={{
+      boxSizing: "border-box",
       width: "55%",
       height: "55%",
       borderRadius: "50%",
@@ -62,6 +63,7 @@ const Pupil = () => (
 const Eyes = () => (
   <div
     sx={{
+      boxSizing: "border-box",
       position: "absolute",
       width: "100%",
       height: "100%",
