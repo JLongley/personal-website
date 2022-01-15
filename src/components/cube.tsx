@@ -34,11 +34,9 @@ const Cube = ({
   stroke = width / 16,
   hiddenMobile = false,
   animationDuration = width / 4,
-  animationDelay = width * 17, //pseudorandom
+  animationDelay = ((width % 17) / 17) * animationDuration, //pseudoradom
   children,
 }: CubeProps) => {
-  console.log("animationDelay", animationDelay);
-
   const page = useMousePosition();
   const [dimensions, setDimensions] = useState(null);
 
@@ -92,13 +90,13 @@ const Cube = ({
           width: `${width}px`,
           height: `${width}px`,
           position: "relative",
-          perspective: `${width * 5}px`,
+          perspective: `${width * 5 * distance}px`,
         }}
       >
         <div
           sx={{
             animation: `${spin} ${animationDuration}s infinite linear`,
-            animationDelay: `-${animationDelay}ms`,
+            animationDelay: `-${animationDelay}s`,
             width: "100%",
             height: "100%",
             position: "absolute",

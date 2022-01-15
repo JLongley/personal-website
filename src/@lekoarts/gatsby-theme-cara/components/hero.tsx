@@ -79,7 +79,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         width={350}
         left="45%"
         top="5%"
-        color="icon_blue"
+        color="primary"
         animationDuration={300}
         animationDelay={0}
       >

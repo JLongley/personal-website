@@ -3,6 +3,7 @@ import { jsx } from "theme-ui";
 
 import Eyes from "./eyes";
 import JimBlankEyesImg from "./Jim_blank_eyes.png";
+// import JimNoEyesImg from "./Jim_transparent.png";
 import JimNoEyesImg from "./Jim_no_eyes.png";
 
 const Headshot = ({ width, left, top, borderColor }: HeadshotProps) => (
