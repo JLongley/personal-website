@@ -68,12 +68,12 @@ const Contact = ({
       <UpDown>
         <Cube
           hiddenMobile
-          width={32}
+          width={28}
           color="icon_darkest"
           left="70%"
           top="20%"
         />
-        <Cube width={32} color="icon_darkest" left="25%" top="5%" />
+        <Cube width={40} color="icon_darkest" left="25%" top="5%" />
       </UpDown>
       <UpDownWide>
         <Cube width={48} color="icon_brightest" left="95%" top="50%" />

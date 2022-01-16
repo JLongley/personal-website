@@ -80,7 +80,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         left="45%"
         top="5%"
         color="primary"
-        animationDuration={300}
+        animationDuration={200}
         animationDelay={0}
       >
         <Headshot width="100%" left="45%" top="5%" />

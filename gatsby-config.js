@@ -8,7 +8,7 @@ module.exports = {
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-cara/gatsby-config.js
     siteTitle: `Jimmy Longley`,
-    siteTitleAlt: `Jimmy Longley Portfolio`,
+    siteTitleAlt: `Jimmy Longley`,
     siteHeadline: `Jimmy Longley`,
     siteUrl: `https://jimmylongley.com`,
     siteDescription: `I'm Jimmy, a software developer based in Seattle, WA with a passion for books, travel, learning, and all things web.`,
