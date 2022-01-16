@@ -24,8 +24,8 @@ const Projects = ({
       bg="linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%)"
       sx={{ clipPath: `polygon(0 15%, 100% 25%, 100% 85%, 0 75%)` }}
       speed={-0.2}
-      offset={offset + 0.1}
-      factor={factor}
+      offset={offset - 0.2}
+      factor={factor + 0.3}
     />
     <Content speed={0.4} offset={offset + 0.2} factor={factor}>
       <Inner>
