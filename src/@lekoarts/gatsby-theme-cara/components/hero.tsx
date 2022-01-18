@@ -26,7 +26,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
           left="10%"
           top="10%"
         />
-        <Cube grow={true} width={88} color="icon_red" left="60%" top="70%" />
+        <Cube grow={true} width={188} color="icon_red" left="60%" top="70%" />
         <Cube width={18} color="icon_darker" left="30%" top="15%" />
       </UpDown>
       <UpDownWide>

@@ -52,7 +52,7 @@ const Cube = ({
     if (!!page && !!dimensions) {
       distance = Math.sqrt(
         Math.pow((dimensions.x - page.x) / window.screen.width, 2) +
-          Math.pow((dimensions.y + page.y) / window.screen.height, 2)
+          Math.pow((dimensions.y - page.y) / window.screen.height, 2)
       );
     }
   }
@@ -72,6 +72,8 @@ const Cube = ({
       }
     `;
 
+  const scale = Math.max(distance, 0.2);
+
   return (
     <div
       ref={callBackRef}
@@ -82,7 +84,7 @@ const Cube = ({
         width,
         height: width,
         display: hiddenMobile ? hidden : `block`,
-        transform: `scale(${distance})`,
+        transform: `scale(${scale})`,
       }}
     >
       <div
@@ -90,7 +92,7 @@ const Cube = ({
           width: `${width}px`,
           height: `${width}px`,
           position: "relative",
-          perspective: `${width * 5 * distance}px`,
+          perspective: `${width * 5 * scale}px`,
         }}
       >
         <div
