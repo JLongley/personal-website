@@ -45,7 +45,7 @@ const Projects = ({
       <UpDown>
         <Cube width={32} color="icon_brightest" left="85%" top="75%" />
         <Cube width={48} color="icon_teal" left="70%" top="20%" />
-        <Cube width={34} color="icon_orange" left="25%" top="5%" />
+        <Cube width={34} color="icon_indigo3" left="25%" top="5%" />
         <Cube
           hiddenMobile
           width={112}
@@ -55,12 +55,24 @@ const Projects = ({
         />
       </UpDown>
       <UpDownWide>
-        <Cube hiddenMobile width={64} color="icon_green" left="20%" top="90%" />
+        <Cube
+          hiddenMobile
+          width={64}
+          color="icon_indigo3"
+          left="20%"
+          top="90%"
+        />
         <Cube width={48} color="icon_brightest" left="90%" top="30%" />
-        <Cube width={64} color="icon_yellow" left="70%" top="90%" />
+        <Cube width={64} color="icon_indigo4" left="70%" top="90%" />
         <Cube hiddenMobile width={56} color="icon_teal" left="18%" top="75%" />
         <Cube width={24} color="icon_brightest" left="75%" top="10%" />
-        <Cube hiddenMobile width={36} color="icon_green" left="45%" top="10%" />
+        <Cube
+          hiddenMobile
+          width={36}
+          color="icon_indigo3"
+          left="45%"
+          top="10%"
+        />
       </UpDownWide>
       <Cube
         hiddenMobile
@@ -69,11 +81,11 @@ const Projects = ({
         left="4%"
         top="20%"
       />
-      <Cube width={48} color="icon_pink" left="80%" top="60%" />
-      <Cube width={24} color="icon_orange" left="10%" top="10%" />
-      <Cube width={48} color="icon_yellow" left="29%" top="26%" />
-      <Cube width={64} color="icon_red" left="75%" top="30%" />
-      <Cube width={32} color="icon_yellow" left="80%" top="70%" />
+      <Cube width={48} color="icon_indigo1" left="80%" top="60%" />
+      <Cube width={24} color="icon_indigo3" left="10%" top="10%" />
+      <Cube width={48} color="icon_indigo4" left="29%" top="26%" />
+      <Cube width={64} color="icon_indigo1" left="75%" top="30%" />
+      <Cube width={32} color="icon_indigo4" left="80%" top="70%" />
     </Divider>
   </div>
 );

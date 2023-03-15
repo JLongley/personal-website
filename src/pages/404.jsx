@@ -23,25 +23,25 @@ const NotFound = () => (
             <Cube
               hiddenMobile
               width={240}
-              color="icon_orange"
+              color="icon_indigo3"
               left="10%"
               top="20%"
             />
-            <Cube width={192} color="icon_red" left="60%" top="70%" />
+            <Cube width={192} color="icon_indigo1" left="60%" top="70%" />
             <Cube width={32} color="icon_darker" left="60%" top="15%" />
           </UpDown>
           <UpDownWide>
             <Cube
               hiddenMobile
               width={64}
-              color="icon_blue"
+              color="icon_indigo2"
               left="80%"
               top="10%"
             />
             <Cube width={48} color="icon_brightest" left="90%" top="50%" />
             <Cube width={64} color="icon_darker" left="70%" top="90%" />
             <Cube width={64} color="icon_darkest" left="30%" top="65%" />
-            <Cube width={64} color="icon_pink" left="28%" top="15%" />
+            <Cube width={64} color="icon_indigo1" left="28%" top="15%" />
             <Cube width={32} color="icon_darkest" left="75%" top="10%" />
             <Cube
               hiddenMobile
@@ -75,11 +75,11 @@ const NotFound = () => (
             top="80%"
           />
           <Cube width={32} color="icon_darker" left="25%" top="5%" />
-          <Cube width={246} color="icon_green" left="95%" top="5%" />
+          <Cube width={246} color="icon_indigo3" left="95%" top="5%" />
           <Cube
             hiddenMobile
             width={256}
-            color="icon_purple"
+            color="icon_indigo2"
             left="5%"
             top="90%"
           />

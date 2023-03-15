@@ -22,18 +22,24 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
           hiddenMobile
           grow={true}
           width={180}
-          color="icon_orange"
+          color="icon_indigo3"
           left="10%"
           top="10%"
         />
-        <Cube grow={true} width={188} color="icon_red" left="60%" top="70%" />
+        <Cube
+          grow={true}
+          width={188}
+          color="icon_indigo1"
+          left="60%"
+          top="70%"
+        />
         <Cube width={18} color="icon_darker" left="30%" top="15%" />
       </UpDown>
       <UpDownWide>
         <Cube
           hiddenMobile
           width={16}
-          color="icon_orange"
+          color="icon_indigo3"
           left="80%"
           top="-10%"
         />
@@ -46,7 +52,13 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         />
         <Cube width={56} stroke={12} color="icon_darker" left="7%" top="90%" />
         <Cube width={48} color="icon_darkest" left="30%" top="65%" />
-        <Cube width={60} color="icon_pink" left="28%" top="15%" />
+        <Cube
+          width={60}
+          hiddenMobile
+          color="icon_indigo1"
+          left="28%"
+          top="15%"
+        />
         <Cube width={24} stroke={3} color="icon_darkest" left="75%" top="10%" />
         <Cube
           hiddenMobile
@@ -66,11 +78,17 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         width={262}
         grow={true}
         hiddenMobile
-        color="icon_green"
+        color="icon_indigo3"
         left="95%"
         top="5%"
       />
-      <Cube hiddenMobile width={264} color="icon_purple" left="30%" top="90%" />
+      <Cube
+        hiddenMobile
+        width={264}
+        color="icon_indigo2"
+        left="30%"
+        top="90%"
+      />
       <Cube width={30} color="icon_darkest" left="10%" top="10%" />
       <Cube width={50} color="icon_darkest" left="40%" top="30%" />
       <Cube width={54} color="icon_darker" left="10%" top="50%" />
@@ -80,7 +98,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         left="45%"
         top="5%"
         color="primary"
-        animationDuration={200}
+        animationDuration={1000}
         animationDelay={0}
       >
         <Headshot width="100%" left="45%" top="5%" />

@@ -23,7 +23,13 @@ const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
     />
     <Divider speed={0.1} offset={offset} factor={factor}>
       <UpDown>
-        <Cube hiddenMobile width={40} color="icon_blue" left="50%" top="75%" />
+        <Cube
+          hiddenMobile
+          width={40}
+          color="icon_indigo2"
+          left="50%"
+          top="75%"
+        />
         <Cube
           hiddenMobile
           width={32}
@@ -35,13 +41,19 @@ const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         <Cube
           hiddenMobile
           width={24}
-          color="icon_orange"
+          color="icon_indigo3"
           left="80%"
           top="80%"
         />
       </UpDown>
       <UpDownWide>
-        <Cube hiddenMobile width={96} color="icon_green" left="5%" top="80%" />
+        <Cube
+          hiddenMobile
+          width={96}
+          color="icon_indigo3"
+          left="5%"
+          top="80%"
+        />
         <Cube width={48} color="icon_brightest" left="95%" top="50%" />
         <Cube hiddenMobile width={30} color="icon_dark" left="85%" top="15%" />
         <Cube
@@ -61,7 +73,7 @@ const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         top="20%"
       />
       <Cube width={48} color="icon_darkest" left="70%" top="60%" />
-      <Cube width={30} color="icon_orange" left="10%" top="10%" />
+      <Cube width={30} color="icon_indigo3" left="10%" top="10%" />
       <Cube icon="box" width={48} color="icon_darker" left="20%" top="30%" />
       <Cube width={32} color="icon_darkest" left="80%" top="70%" />
     </Divider>
