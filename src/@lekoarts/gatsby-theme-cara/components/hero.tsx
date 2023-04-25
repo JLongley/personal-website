@@ -3,7 +3,6 @@ import { jsx } from "theme-ui";
 import Divider from "@lekoarts/gatsby-theme-cara/src/elements/divider";
 import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner";
 import Content from "@lekoarts/gatsby-theme-cara/src/elements/content";
-import Headshot from "../../../components/headshot";
 import Cube from "../../../components/cube";
 
 import {
@@ -12,6 +11,8 @@ import {
 } from "@lekoarts/gatsby-theme-cara/src/styles/animations";
 // @ts-ignore
 import Intro from "../sections/intro";
+
+import headshot from "./headshot.jpg";
 
 const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
@@ -98,10 +99,18 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         left="45%"
         top="5%"
         color="primary"
-        animationDuration={1000}
+        animationDuration={700}
         animationDelay={0}
       >
-        <Headshot width="100%" left="45%" top="5%" />
+        <img
+          sx={{
+            boxSizing: "border-box",
+            position: `absolute`,
+            width: "100%",
+            height: "100%",
+          }}
+          src={headshot}
+        />
       </Cube>
     </Divider>
     <Content
